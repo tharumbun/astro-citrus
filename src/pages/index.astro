@@ -8,7 +8,7 @@ import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
 // Fetch WordPress Posts
-const response = await fetch('https://thepenhreview.com/wp-json/wp/v2/posts');
+const response = await fetch('https://wp.phnompenhreview.com/wp-json/wp/v2/posts');
 const posts = await response.json();
 
 
