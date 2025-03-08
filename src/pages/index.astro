@@ -11,11 +11,6 @@ const API_URL = "https://wp.phnompenhreview.com/wp-json/wp/v2/posts";
 const response = await fetch(API_URL);
 const posts = await response.json();
 
-const MAX_POSTS = 10;
-const allPosts = await getAllPosts();
-const allPostsByDate = allPosts
-	.sort(collectionDateSort)
-	.slice(0, MAX_POSTS) as CollectionEntry<"post">[];
 
 const MAX_NOTES = 2;
 const allNotes = await getCollection("note");
