@@ -8,7 +8,7 @@ import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
 // WordPress API
-const res = await fetch("https://wp.phnompenhreview.com/wp-json/wp/v2/posts?_fields=id,title,link");
+const res = await fetch("https://wp.phnompenhreview.com/wp-json/wp/v2/posts?_fields=author,id,excerpt,title,link");
 const posts = await res.json();
 
 // Posts
@@ -36,7 +36,7 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
   <section class="max-w-xl mx-auto relative flex items-center justify-center h-screen -mt-24">
     <div class="w-full text-center">
       <span class="title text-3xl bg-gradient-to-r from-accent-two/85 via-accent-one/85 to-accent-two/85 dark:from-accent-two dark:via-accent-one dark:to-accent-two bg-clip-text text-transparent">
-        Introducing Astro Citrus!
+        Phnom Penh, reviewed & revealed
       </span>
       <p class="mt-4 mb-4 text-lg font-medium">
 Welcome to The Penh Review, your thoughtful companion to life, culture, and stories in Phnom Penh, Cambodia’s vibrant capital.
