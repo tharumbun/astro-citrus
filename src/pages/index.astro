@@ -7,10 +7,8 @@ import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
-const API_URL = "https://wp.phnompenhreview.com/wp-json/wp/v2/posts";
-
-const response = await fetch(API_URL);
-const posts = await response.json();
+const res = await fetch("https://wp.phnompenhreview.com/wp-json/wp/v2/posts");
+const posts = await res.json();
 
 const MAX_NOTES = 2;
 const allNotes = await getCollection("note");
