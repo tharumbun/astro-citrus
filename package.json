@@ -15,9 +15,12 @@
     "check": "astro check"
   },
 
-  "scripts": {
-  "preinstall": "npm audit fix --force",
-  "build": "astro build"
+{
+  "name": "astro-citrus",
+  "version": "1.0.0",
+  "dependencies": {
+    "astro": "^4.0.0"
+  }
 }
 
   
