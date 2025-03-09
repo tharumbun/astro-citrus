@@ -14,16 +14,6 @@
     "format:imports": "biome check --formatter-enabled=false --write",
     "check": "astro check"
   },
-
-{
-  "name": "astro-citrus",
-  "version": "1.0.0",
-  "dependencies": {
-    "astro": "^4.0.0"
-  }
-}
-
-  
   "dependencies": {
     "@astrojs/mdx": "4.0.3",
     "@astrojs/preact": "^4.0.1",
