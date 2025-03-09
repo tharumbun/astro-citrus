@@ -8,7 +8,7 @@ import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
 // WordPress API
-const res = await fetch("https://wp.phnompenhreview.com/wp-json/wp/v2/posts");
+const res = await fetch("https://wp.phnompenhreview.com/wp-json/wp/v2/posts?_fields=id,title,link");
 const posts = await res.json();
 
 // Posts
@@ -39,7 +39,7 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
         Introducing Astro Citrus!
       </span>
       <p class="mt-4 mb-4 text-lg font-medium">
-        Hi, I’m an Astro theme for building websites or blogs. To customize, add posts, or make it yours, click the GitHub icon below to visit my repo.
+Welcome to The Penh Review, your thoughtful companion to life, culture, and stories in Phnom Penh, Cambodia’s vibrant capital.
       </p>
       <div class="flex justify-center mb-4">
         <SocialList />
@@ -47,7 +47,7 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
       <div class="flex justify-center space-x-4 mt-4">
         <a href="/posts/" class="relative flex items-center justify-center h-8 px-4 rounded-lg shadow-lg hover:brightness-110 transition-all bg-gradient-to-r from-accent-one to-accent-two">
           <span class="text-bgColor font-semibold">
-            Read Blog
+            Read Reviews
           </span>
         </a>
 
